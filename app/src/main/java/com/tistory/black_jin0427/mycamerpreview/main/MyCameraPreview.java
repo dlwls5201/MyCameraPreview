@@ -199,7 +199,6 @@ public class MyCameraPreview extends SurfaceView implements SurfaceHolder.Callba
     };
 
 
-    //참고 : http://stackoverflow.com/q/37135675
     private Camera.PictureCallback jpegCallback = new Camera.PictureCallback() {
         public void onPictureTaken(byte[] data, Camera camera) {
 

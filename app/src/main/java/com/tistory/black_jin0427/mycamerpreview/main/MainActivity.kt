@@ -15,15 +15,14 @@ import android.view.KeyEvent
 import android.widget.Toast
 import com.tistory.black_jin0427.mycamerpreview.R
 
-// 개발 : https://developer.android.com/guide/topics/media/camera
-// 참고 : http://webnautes.tistory.com/822
 class MainActivity : AppCompatActivity() {
 
     private val TAG = "MyTag"
 
     private val PERMISSIONS_REQUEST_CODE = 100
 
-    private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+    private val REQUIRED_PERMISSIONS =
+            arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)
 
     private var CAMERA_FACING = Camera.CameraInfo.CAMERA_FACING_FRONT
 
@@ -46,10 +45,13 @@ class MainActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             // OS가 Marshmallow 이상일 경우 권한체크를 해야 합니다.
 
-            val permissionCheckCamera = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
-            val permissionCheckStorage = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            val permissionCheckCamera
+                    = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+            val permissionCheckStorage
+                    = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
 
-            if (permissionCheckCamera == PackageManager.PERMISSION_GRANTED && permissionCheckStorage == PackageManager.PERMISSION_GRANTED) {
+            if (permissionCheckCamera ==
+                    PackageManager.PERMISSION_GRANTED && permissionCheckStorage == PackageManager.PERMISSION_GRANTED) {
 
                 // 권한 있음
                 Log.d(TAG, "권한 이미 있음")
