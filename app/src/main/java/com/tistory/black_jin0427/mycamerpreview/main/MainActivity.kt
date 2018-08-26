@@ -42,6 +42,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initButton()
 
+        Log.d(TAG, "onCreate")
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             // OS가 Marshmallow 이상일 경우 권한체크를 해야 합니다.
 
@@ -143,6 +145,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnTransform.setOnClickListener {
+            ivFrameSet.setImageDrawable(null)
             transformCamera()
         }
 
