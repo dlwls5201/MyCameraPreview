@@ -268,6 +268,7 @@ public class MyCameraPreview extends SurfaceView implements SurfaceHolder.Callba
     /**
      * 이미지 저장을 위한 콜백 클레스
      */
+    @SuppressLint("StaticFieldLeak")
     private class SaveImageTask extends AsyncTask<byte[], Void, Void> {
 
         @Override
