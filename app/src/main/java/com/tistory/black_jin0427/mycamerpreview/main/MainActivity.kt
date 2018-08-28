@@ -145,6 +145,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnTransform.setOnClickListener {
+            //전면, 후면 전환시 배경 이미지를 초기화 해줍니다.
             ivFrameSet.setImageDrawable(null)
             transformCamera()
         }

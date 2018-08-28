@@ -229,8 +229,6 @@ public class MyCameraPreview extends SurfaceView implements SurfaceHolder.Callba
              * 셀카 모드에는 저장 시 좌우 반전을 해줘야 한다.
              */
             if(mCameraInfo.facing == Camera.CameraInfo.CAMERA_FACING_FRONT) {
-                //Log.d("MyTag","180도 추가 회전 후 좌우반전을 해줍니다.");
-                //orientation += 180;
                 matrix.setScale(-1,1);
             }
 
