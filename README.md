@@ -7,8 +7,6 @@ This camera preview app
 
 Add a capture function with background image
 
+You can get the more information in my blog
 
-Screenshots
--------------
-
-<img src="screenshots/main.png" height="400" alt="Screenshot"/>
+http://black-jin0427.tistory.com/86
